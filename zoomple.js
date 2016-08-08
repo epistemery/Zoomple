@@ -299,7 +299,8 @@
 			imgBig = this.$holder.find("img"),
 			ratioW = this.options.zoomWidth/imgBig.width(),
 			ratioH = this.options.zoomHeight/imgBig.height();
-		eylet.css({background : "url("+img.attr('src')+") 0 0 no-repeat"});
+		//eylet.css({background : "url("+img.attr('src')+") 0 0 no-repeat"});
+		eylet.css("background-color", "rgba(255,255,255,0.5");
 		this.overlay.setEyletSize(Math.round(ratioW*img.width()), Math.round(ratioH*img.height()));
 	}
 	Zoomple.prototype.clearEylet = function(){
@@ -357,7 +358,7 @@
 	Zoomple.prototype.clearCaption = function(){
 		this.$holder.find(".caption").remove(); 
 	}
-			
+
 		   
 	$.fn.zoomple = function (options) {
         return this.each(function () {
